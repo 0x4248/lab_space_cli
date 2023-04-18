@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+# Lab Space CLI
+# A CLI for the Lab Space project.
+# Github: https://github.com/awesomelewis2007/lab_space_cli
+# By: Lewis Evans
+
 import sys
 import subprocess
 import curses
