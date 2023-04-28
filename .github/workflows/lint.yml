@@ -22,7 +22,7 @@ jobs:
           pip install black
       - name: Lint with Black
         run: |
-          black --check .
+          black .
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "Format python code with black"
