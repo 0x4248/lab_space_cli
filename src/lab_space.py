@@ -8,7 +8,28 @@
 import sys
 import subprocess
 import curses
-supported_languages = ["c", "c++", "python", "rust", "bash", "nodejs", "typescript", "go", "elixir", "assembly", "fortran", "java", "r", "d", "lisp", "php", "haskell", "f#"]
+
+supported_languages = [
+    "c",
+    "c++",
+    "python",
+    "rust",
+    "bash",
+    "nodejs",
+    "typescript",
+    "go",
+    "elixir",
+    "assembly",
+    "fortran",
+    "java",
+    "r",
+    "d",
+    "lisp",
+    "php",
+    "haskell",
+    "f#",
+]
+
 
 def print_menu(stdscr, selected_idx):
     stdscr.clear()
@@ -20,9 +41,11 @@ def print_menu(stdscr, selected_idx):
             stdscr.addstr(f"  {lang.capitalize()}\n")
     stdscr.refresh()
 
+
 def select_language():
     curses.wrapper(select_language_wrapper)
-    
+
+
 def select_language_wrapper(stdscr):
     selected_idx = 0
     while True:
@@ -40,6 +63,7 @@ def select_language_wrapper(stdscr):
             print(f"Starting {image_string} container")
             subprocess.run(["docker", "run", "-it", "--rm", image_string], check=True)
             break
+
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
@@ -62,7 +86,9 @@ if __name__ == "__main__":
                 # start docker container
                 image_string = f"ghcr.io/awesomelewis2007/lab_space_{language}:latest"
                 print(f"Starting {image_string} container")
-                subprocess.run(["docker", "run", "-it", "--rm", image_string], check=True)
+                subprocess.run(
+                    ["docker", "run", "-it", "--rm", image_string], check=True
+                )
             else:
                 print("Sorry that language is not supported yet")
                 print("Please chose one of the following languages:")
@@ -70,4 +96,3 @@ if __name__ == "__main__":
                     print(f"{i+1}: {lang.capitalize()}")
     else:
         print("Please enter a valid command")
-    
