@@ -1,16 +1,12 @@
-on:
-  push:
-    branches: [master]
-  pull_request:
-    branches: [master]
-
+on: [push, pull_request]
 
 jobs:
-  lint:
+  python-black:
+    name: Python Black
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Black Code Formatter
-        uses: lgeiger/black-action@v1.0.1
+      - uses: actions/checkout@v3
+      - name: Python Black
+        uses: cytopia/docker-black@0.8
         with:
-          args: . --check
+          path: .
