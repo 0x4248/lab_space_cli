@@ -2,7 +2,7 @@
 # Lab Space CLI
 # A CLI for the Lab Space project.
 # Github: https://github.com/awesomelewis2007/lab_space_cli
-# Licence: GPL-3.0
+# Licence: GNU General Public License v3.0
 # By: Lewis Evans
 
 import sys
