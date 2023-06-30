@@ -1,6 +1,6 @@
 # Lab Space CLI
 
-A CLI for the [Lab Space](https://www.github.com/awesomelewis2007/lab_space) project.
+A CLI for the [Lab Space](https://www.github.com/lewisevans2007/lab_space) project.
 
 ## Usage
 To start a container, use the following command:
