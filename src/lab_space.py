@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # Lab Space CLI
 # A CLI for the Lab Space project.
-# Github: https://github.com/lewisevans2007/lab_space_cli
+# Github: https://github.com/0x4248/lab_space_cli
 # Licence: GNU General Public License v3.0
-# By: Lewis Evans
+# By: 0x4248
 
 import sys
 import subprocess
@@ -59,7 +59,7 @@ def select_language_wrapper(stdscr):
             curses.endwin()
             language = supported_languages[selected_idx]
             # start docker container
-            image_string = f"ghcr.io/lewisevans2007/lab_space_{language}:latest"
+            image_string = f"ghcr.io/0x4248/lab_space_{language}:latest"
             print(f"Starting {image_string} container")
             subprocess.run(["docker", "run", "-it", "--rm", image_string], check=True)
             break
@@ -84,7 +84,7 @@ if __name__ == "__main__":
             language = sys.argv[2].lower()
             if language in supported_languages:
                 # start docker container
-                image_string = f"ghcr.io/lewisevans2007/lab_space_{language}:latest"
+                image_string = f"ghcr.io/0x4248/lab_space_{language}:latest"
                 print(f"Starting {image_string} container")
                 subprocess.run(
                     ["docker", "run", "-it", "--rm", image_string], check=True

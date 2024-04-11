@@ -3,9 +3,9 @@
     "description": "A CLI for the Lab Space project.",
     "version": "",
     "main_file": "src/lab_space.py",
-    "author": "Lewis Evans",
+    "author": "0x4248",
     "license": "GNU General Public License v3.0",
-    "url": "https://www.github.com/lewisevans2007/lab_space_cli",
+    "url": "https://www.github.com/0x4248/lab_space_cli",
     "email": "none",
     "languages": [
         "python"
